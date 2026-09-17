@@ -79,11 +79,7 @@ def get_verdict_and_reason(clicked_lat, clicked_lon, df):
     nearby = get_nearby_places(clicked_lat, clicked_lon, df)
     score, competitor_count, gap_bonus = calculate_opportunity_score(nearby)
 
-    # IMPORTANT: zero competitors could mean "great untapped spot" OR
-    # "we just don't have data here" (our dataset only has 82 points
-    # across all of Greater Noida, so gaps are mostly a data issue,
-    # not a genuine signal). We flag this honestly instead of scoring
-    # it as if it were confirmed to be a good opportunity.
+   
     if competitor_count == 0:
         verdict = "Insufficient Data"
         reason = ("No restaurants found in our dataset within 500m. "
