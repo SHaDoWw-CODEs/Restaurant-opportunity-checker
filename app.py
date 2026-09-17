@@ -1,24 +1,3 @@
-"""
-Step 4 (v2): Main Streamlit app with improved UI/UX.
-Restaurant Location Opportunity Checker for Greater Noida.
-
-WHAT'S NEW in this version:
-1. A 500m radius circle is drawn around the clicked point, so it's
-   visually obvious what area the score is based on.
-2. A colored marker appears at the clicked point itself (green/orange/
-   red/gray depending on verdict) -- feedback right on the map, not
-   just in the sidebar.
-3. Cleaner sidebar: icons per verdict, and an actual table of nearby
-   competitors (name, category, distance) instead of a plain sentence.
-
-HOW CLICK PERSISTENCE WORKS:
-Streamlit reruns the whole script top-to-bottom on every interaction.
-To "remember" the last click (so we can draw its circle/marker), we
-store it in st.session_state. When a NEW click comes in via st_folium,
-we save it and trigger one st.rerun() so the map redraws immediately
-with the new circle/marker -- otherwise it would lag one click behind.
-"""
-
 import streamlit as st
 import folium
 from streamlit_folium import st_folium
@@ -160,7 +139,7 @@ with st.expander("About this tool & limitations"):
     **How the score works:** based on distance-weighted nearby restaurant
     competitor density (within 500m) and category diversity in our dataset.
     Closer competitors count more heavily than ones near the edge of the radius.
-
+ 
     **Known limitations:**
     - Dataset covers 108 restaurants pulled from Foursquare's Places API
       for Greater Noida -- not exhaustive, so sparse areas may show
@@ -170,3 +149,4 @@ with st.expander("About this tool & limitations"):
       market saturation only, not customer sentiment.
     - Always verify with on-ground research before making real decisions.
     """)
+    

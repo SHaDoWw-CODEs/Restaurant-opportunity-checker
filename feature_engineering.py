@@ -1,29 +1,3 @@
-"""
-Step 3: Feature engineering for the Restaurant Location Opportunity Checker.
-
-WHY this approach:
-- We dropped the "rating" signal since it's paywalled on every free API
-  we tried (Google needs prepayment, Foursquare gates it behind Premium).
-- Instead, we focus on MARKET SATURATION: how many competitors are near
-  a point, and what categories they are. This is a legitimate, honest
-  signal for "should I open a restaurant here" -- arguably more directly
-  useful than star ratings anyway.
-
-DISTANCE WEIGHTING (v2):
-- Earlier version treated every nearby competitor equally, whether they
-  were 50m away or 490m away. That's not realistic -- a competitor right
-  next door matters more than one near the edge of our search radius.
-- Now each competitor's penalty is scaled by how close it is:
-      weight = 1 - (distance / radius)
-  A competitor at distance 0 gets full weight (1.0), one at the radius
-  edge gets weight 0 (no penalty), and it scales linearly in between.
-
-For any given (lat, lon) point, this module calculates:
-1. competitor_count -- how many restaurants within RADIUS_METERS
-2. category_breakdown -- counts per cuisine/category nearby
-3. opportunity_score -- a 0-100 score (higher = better opportunity)
-"""
-
 import pandas as pd
 from geopy.distance import geodesic
 

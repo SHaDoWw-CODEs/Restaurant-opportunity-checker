@@ -1,17 +1,3 @@
-"""
-Step 2 (v3): Pull restaurant/cafe data for Greater Noida using the
-CURRENT Foursquare Places API (places-api.foursquare.com).
-
-WHY this version:
-- Old v3 API and category IDs are dead (sunset May 2026) -- using new
-  endpoint, Bearer auth, and required version header.
-- Requesting 'rating' field explicitly to test if it's available on
-  the free tier.
-- Filtering food-related places by category name text (more robust
-  than exact category ID matching, which keeps changing).
-- Handles rate limiting (429 errors) with a retry + slower pacing.
-"""
-
 import requests
 import pandas as pd
 import time
