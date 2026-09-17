@@ -1,0 +1,22 @@
+id,lat,lon,name,amenity,cuisine
+1741080519,28.4743748,77.4814775,Sagar Ratna,cafe,unspecified
+1741080520,28.4742994,77.4814775,Red Chillies,cafe,unspecified
+1741080588,28.4735921,77.4841489,Coffee Day Express,cafe,unspecified
+1741080589,28.4730922,77.4832263,Nescafe,cafe,unspecified
+3738703103,28.5438231,77.4094504,Domino's,fast_food,pizza
+4443173391,28.4790787,77.5004442,Unknown,fast_food,unspecified
+4443195689,28.4808504,77.499685,Unknown,fast_food,unspecified
+4443195690,28.4799945,77.4998804,Unknown,fast_food,unspecified
+4443195691,28.4804144,77.5004045,Unknown,fast_food,unspecified
+4443195889,28.4808085,77.4998106,Unknown,fast_food,unspecified
+4443196189,28.4796871,77.5000739,Unknown,restaurant,unspecified
+4443196490,28.4798436,77.5007724,Unknown,restaurant,unspecified
+10763387175,28.5007264,77.4093833,Alma cafe & bakery,cafe,unspecified
+12697358622,28.4971108,77.4263968,Cafe Nifraam,cafe,unspecified
+13076227271,28.462179,77.4900551,Mother Dairy,fast_food,unspecified
+13627162393,28.5066488,77.4096556,Simply South,restaurant,South Indian
+13652378362,28.4767408,77.47738,Hungry Scholars,fast_food,unspecified
+13654103184,28.4568353,77.4993846,Burger King,fast_food,burger
+13664263044,28.5114673,77.4036053,The Coach,restaurant,unspecified
+13699288826,28.4310143,77.5036466,Kake Da Hotel Greater Noida,restaurant,indian;north_indian
+14108393901,28.473058,77.515568,Domino's Pizza,restaurant,unspecified
